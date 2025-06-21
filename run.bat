@@ -1,4 +1,4 @@
-:: @ECHO off
+@ECHO off
 
 :: ---Initialization ---
 setlocal
@@ -18,9 +18,9 @@ if not exist %OUT_PATH% (
 :: ---Main Execution ---
 echo Compiling the code...
 dir /s /b %SRC_PATH%\*.java > temp
-javac -cp LIB_PATH\*.jar -d %OUT_PATH% @temp
+javac -cp %LIB_PATH%\* -d %OUT_PATH% @temp
 echo Running the code...
-java -cp %OUT_PATH%;%LIB_PATH%\*.jar SudokuApp
+java -cp %OUT_PATH%;%LIB_PATH%\* SudokuApp
 
 :: ---Exit Script ---
 echo Cleaning up...
