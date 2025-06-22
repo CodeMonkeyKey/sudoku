@@ -1,9 +1,8 @@
 package interfaces;
 
-import java.util.List;
-
 public interface GameBoard {
-    Integer getValue(int row, int column);
-    List<Integer> getRow(int row);
-    List<Integer> getColumn(int column);
+    int getValue(int row, int column);
+    void setValue(int row, int column, int value);
+    int getBoardSize();
+    Integer[][] getBoardAsArray();
 }

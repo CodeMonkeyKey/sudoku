@@ -1,5 +1,5 @@
 package interfaces;
 
 public interface PuzzleGenerator {
-    GameBoard generateBoard();
+    GameBoard generateBoard(int boardSize);
 }
